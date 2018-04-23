@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block container %}
+<h2>Welcome, Please Sign Up here:</h2><br><br>
+<div align="center">
+ 
+<form method="post" action="/user">{% csrf_token %}
+<div>
+  Name:
+  <input type="text" name="name">
+  <br>
+  <br>
+  Username:
+  <input type="text" name="username">
+  <br>
+  <br>
+  Email Address:
+  <input type="text" name="emailaddress" value="you.example@email.com">
+  <br>
+  <br>
+  User Type:
+  <select name="userType">
+    <option value="patient">Patient</option>
+    <option value="doctor">Doctor</option>
+    <option value="staff">Staff</option>
+  </select>
+  <br><br>
+  Password:
+  <input type="password" name="password" >
+  <br><br>
+  Confirm Password:
+  <input type="password" name="confirmpassword" >
+  <br><br>
+</div>
+  <input type="submit" value="  Create account" class="btn btn-primary">
+</form> <br><br>
+<h4>Already have an account?  <a href="/admin">Login</a></h4>
+
+
+</div>
+{% endblock container %}

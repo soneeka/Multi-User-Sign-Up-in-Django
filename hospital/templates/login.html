@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block container %}
+<body align="center">
+ <h1> Login</h1>
+<form method="post">
+   {% csrf_token %}
+   {{ form.as_p }}
+  <button type="submit" class="btn btn-primary outline">Login</button>
+</form><br><br>
+<h4>New in hospital?  <a href="{% url 'sign-up' %}">Sign Up Here</a></h4>
+<h4><a href="{% url 'forget-pw' %}">Forget your password?</a></h4>
+</body>
+ {% endblock container %}

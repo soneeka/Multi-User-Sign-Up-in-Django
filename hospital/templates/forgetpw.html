@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block container %}
+
+
+<div align="center">
+  <h2>Did you forget your password?</h2><br><br>
+<form action="">
+  Email address:
+  <input type="text" name="email address" >
+  <br><br>
+  <input href="{% url 'reset-pw'%} " type="submit" value="Send password reset email" class="btn btn-primary">
+</form> 
+</div>
+{% endblock container %}
+
+
+
